@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(printf %o $((5#${WATER//water/} + 5#${STIR//stir./}))) | tr 01234567 bestchol
+echo -n $(printf %o $((5#${WATER//water/} + 5#${STIR//stir./}))) | tr '01234567' 'bestchol'
