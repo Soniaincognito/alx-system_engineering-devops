@@ -1,4 +1,4 @@
-ckground Context
+background Context
 You have been given 2 additional servers:
 
 gc-[STUDENT_ID]-web-02-XXXXXXXXXX
