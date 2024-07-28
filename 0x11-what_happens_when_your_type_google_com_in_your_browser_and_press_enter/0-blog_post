@@ -1,0 +1,54 @@
+t Happens When You Type https://www.google.com in Your Browser and Press Enter
+Have you ever wondered what happens behind the scenes when you type a URL in your browser and press Enter? This seemingly simple action triggers a complex series of events involving multiple systems and protocols to deliver the web page to your screen. Let's break down the process step by step, focusing on key elements such as DNS requests, TCP/IP, firewalls, HTTPS/SSL, load balancers, web servers, application servers, and databases.
+
+To visualize this process, I've created a diagram illustrating the flow of the request. You can view the diagram here.
+
+
+DNS Request
+The first step in this journey is the Domain Name System (DNS) request. DNS is like the phone book of the internet, translating human-friendly domain names (like www.google.com) into IP addresses (like 172.217.0.46) that computers use to identify each other on the network.
+
+When you type https://www.google.com into your browser, the browser first checks its cache to see if it already has the IP address for this domain. If not, it sends a DNS query to a DNS server. This query might pass through several DNS servers, including your local DNS server provided by your ISP, before it finds the authoritative DNS server for google.com, which returns the corresponding IP address.
+
+TCP/IP
+Once the IP address is obtained, the browser establishes a connection with the Google server using the Transmission Control Protocol (TCP). TCP ensures reliable communication between your device and the server. The browser sends a TCP SYN (synchronize) packet to the server, which responds with a SYN-ACK (synchronize-acknowledge) packet. Finally, your browser sends an ACK (acknowledge) packet back to the server, completing the three-way handshake.
+
+The Internet Protocol (IP) handles addressing and routing the packets of data across the internet. IP ensures that the packets travel from your device to the Google server efficiently.
+
+Firewall
+During this communication, both your device and the Google server may pass through multiple firewalls. Firewalls are security systems designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. They help protect networks from unauthorized access and cyber threats.
+
+HTTPS/SSL
+Since the URL starts with "https://," the communication between your browser and the Google server is secured using HTTPS (HyperText Transfer Protocol Secure). HTTPS uses SSL/TLS (Secure Sockets Layer/Transport Layer Security) to encrypt the data exchanged between your browser and the server, ensuring that sensitive information like passwords and personal data remains private.
+
+The SSL/TLS handshake involves the following steps:
+
+Your browser sends a "ClientHello" message to the server, initiating the SSL/TLS handshake.
+The server responds with a "ServerHello" message, providing its SSL certificate.
+Your browser verifies the server's certificate with a trusted Certificate Authority (CA).
+Both your browser and the server generate session keys for encrypting the communication.
+Load Balancer
+Large-scale web services like Google use load balancers to distribute incoming traffic across multiple servers. A load balancer ensures that no single server is overwhelmed with requests, improving performance and reliability. When your request reaches Google's infrastructure, the load balancer determines which server is best suited to handle your request and forwards it accordingly.
+
+Web Server
+The web server is responsible for handling HTTP requests from clients (like your browser) and serving web pages in response. In this case, the web server receives your request for the Google homepage and processes it. Web servers like Apache, Nginx, and Microsoft IIS are commonly used for this purpose.
+
+Application Server
+The web server often works in conjunction with an application server, which hosts the back-end logic and applications that generate dynamic content. For Google, this could involve querying various services, running algorithms, and assembling the data required to build the search results page.
+
+Database
+Finally, the application server may interact with a database to fetch or store data. For instance, when you perform a search on Google, the search query is processed by the application server, which then queries Google's massive databases to retrieve relevant search results. Databases are crucial for storing and retrieving structured data efficiently.
+
+Conclusion
+The process of loading a web page involves a series of intricate steps and interactions between various systems and protocols. From DNS resolution to SSL encryption, load balancing, and database queries, each component plays a vital role in delivering the web experience we often take for granted.
+
+Understanding these underlying mechanisms not only enhances our appreciation of the technology but also equips us with valuable knowledge for technical interviews and real-world problem-solving in software engineering.
+
+Feel free to share your thoughts and feedback in the comments below. If you found this post helpful, consider sharing it with others who might benefit from this insight.
+
+Stay tuned for more technical deep dives and insights by following my Medium or LinkedIn profiles.
+
+If you want to read more technical content or have any questions, don't hesitate to reach out!
+
+#SoniaOpone #TechInsights #WebDevelopment #DNS #SSL #LoadBalancers #WebServers #ApplicationServers #Databases
+
+
