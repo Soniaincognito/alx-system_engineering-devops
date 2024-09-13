@@ -2,11 +2,11 @@
 **0x08. Networking basics #1**
 
 ## Author's Details.
-Name: *Wendy Munyasi.*
+Name: *Sonia opone *
 
-Email: *wendymunyasi@gmail.com*
+Email: *opone345@gmail.com*
 
-Tel:*+254707240068.*
+Tel:*+254790397527.*
 
 ##  Requirements
 
