@@ -1,0 +1,12 @@
+## DNS Resolution
+
+When you type `https://www.google.com` into your browser, the first step is to resolve the domain name to an IP address. This process involves querying DNS servers, which respond with the IP address associated with the domain name. Here's a step-by-step breakdown:
+
+1. **Browser Cache**: The browser first checks its own cache to see if it has recently resolved the domain. If the IP address is found in the cache, it uses this address and skips the next steps.
+2. **OS Cache**: If the browser cache is empty, the browser asks the underlying operating system to resolve the domain name. The OS maintains its own cache of DNS resolutions.
+3. **Router Cache**: If the OS cache does not contain the IP address, the query is sent to the router, which also maintains a cache of recently resolved domains.
+4. **ISP DNS**: If the router does not have the address, it forwards the request to the DNS server of the Internet Service Provider (ISP). The ISP's DNS server performs the actual lookup if the address is not already cached.
+5. **Recursive DNS Servers**: The ISP's DNS server may query other DNS servers in a recursive manner, starting from the root DNS servers, then the top-level domain (TLD) servers, and finally the authoritative DNS servers for `google.com`.
+
+This entire process is optimized with caching at multiple levels to reduce latency and improve the speed of DNS resolution.
+
